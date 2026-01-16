@@ -1,12 +1,19 @@
+'''
+snake = 1, Water = 2, Gun = 3
+# Snake drinks Water
+# Water disables Gun
+# Gun kills Snake
+'''
+
 import random
 
 user_dict = {"s": 1, "w": 2, "g": 3}
 reverse_dict = {1: "Snake🐍", 2: "Water💧", 3: "Gun🔫"}
 
 winning_rules = {
-    1: 2,  # Snake drinks Water
-    2: 3,  # Water disables Gun
-    3: 1   # Gun kills Snake
+    1: 2,  
+    2: 3,
+    3: 1 
 }
 
 user_score = 0
@@ -19,7 +26,7 @@ while True:
     computer = random.choice([1, 2, 3])
     user_str = input("\nEnter your choice: ").lower()
 
-    if user_str == "q":
+    if (user_str == "q"):
         print(f"\nThanks for playing! Final Score → You: {user_score} | Computer: {computer_score}\n")
         break
 
